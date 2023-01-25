@@ -10,6 +10,11 @@
 			PersonEmployee = person;
 			TaxID = taxID;
 		}
-	}
+
+        public virtual string GetOfficialDuties()
+        {
+			return "University Employee Title";
+        }
+    }
 }
 
