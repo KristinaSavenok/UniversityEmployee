@@ -4,7 +4,7 @@
     {
 		public Course Course { get; set; }
 
-		public Teacher(Person person, int taxID, Course course) : base(person, taxID)
+		public Teacher(Person person, int taxId, Course course) : base(person, taxId)
 		{
 			Course = course;
 		}

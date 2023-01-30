@@ -37,9 +37,28 @@ for (int i = 0; i < employeesArray.Length; i++)
 Console.WriteLine("list of teachers:");
 for (int i = 0; i < employeesArray.Length; i++)
 {
-    if (employeesArray[i] is DegreeTeacher)
+    if (employeesArray[i] is Teacher)
     {
         Console.WriteLine(employeesArray[i].GetOfficialDuties());
     }
 }
-    
+
+string RectorBSU = "Korotkij";
+string AddressBSU = "Minsk, Pushkina st, 33";
+Room MainBuildingRoom12 = new Room("lecture", 12);
+Room MainBuildingRoom34 = new Room("laboratory", 34);
+Room MainBuildingRoom222 = new Room("lecture", 222);
+Room[] MainBuildingRooms = new Room[]
+{
+    MainBuildingRoom12,
+    MainBuildingRoom34,
+    MainBuildingRoom222
+};
+Building MainBuilding = new Building(MainBuildingRooms);
+Building[] Buildings = new Building[]
+{
+    MainBuilding
+};
+
+University BSU = new University(RectorBSU, employeesArray, Buildings, AddressBSU);
+
