@@ -2,12 +2,12 @@
 {
 	public class University
 	{
-		public string Rector;
-		public UniversityEmployeeItem[] UniversityEmployeeItems;
-		public Building[] Buildings;
-		public string Address;
+		public Rector Rector { get; set; }
+		public UniversityEmployeeItem[] UniversityEmployeeItems { get; set; }
+        public Building[] Buildings { get; set; }
+        public Address Address { get; set; }
 
-        public University(string rector, UniversityEmployeeItem[] universityEmployeeItems, Building[] buildings, string address)
+        public University(Rector rector, UniversityEmployeeItem[] universityEmployeeItems, Building[] buildings, Address address)
         {
             Rector = rector;
             UniversityEmployeeItems = universityEmployeeItems;

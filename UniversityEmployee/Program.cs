@@ -43,8 +43,8 @@ for (int i = 0; i < employeesArray.Length; i++)
     }
 }
 
-string RectorBSU = "Korotkij";
-string AddressBSU = "Minsk, Pushkina st, 33";
+Rector Rector = new Rector(new Person("Nik", "Nok"), 13);
+Address Address = new Address("Nowaja", 90);
 Room MainBuildingRoom12 = new Room("lecture", 12);
 Room MainBuildingRoom34 = new Room("laboratory", 34);
 Room MainBuildingRoom222 = new Room("lecture", 222);
@@ -54,11 +54,12 @@ Room[] MainBuildingRooms = new Room[]
     MainBuildingRoom34,
     MainBuildingRoom222
 };
-Building MainBuilding = new Building(MainBuildingRooms);
+Building MainBuilding = new Building(MainBuildingRooms, "Minsk, Nowaja st, 1");
 Building[] Buildings = new Building[]
 {
     MainBuilding
 };
 
-University BSU = new University(RectorBSU, employeesArray, Buildings, AddressBSU);
+University BSU = new University(Rector, employeesArray, Buildings, Address);
 
+Console.WriteLine(BSU.Rector.GetOfficialDuties());

@@ -2,12 +2,26 @@
 {
     public class Room
     {
-        public string ClassRoomeType;
-        public int Number;
-
-        public Room(string classRoomeType, int number)
+        private int _number;
+        public string RoomType { get; set; }
+        public int Number
         {
-            ClassRoomeType = classRoomeType;
+            get
+            {
+                return _number;
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    _number = value;
+                }
+            }
+        }
+
+        public Room(string roomType, int number)
+        {
+            RoomType = roomType;
             Number = number;
         }
 
